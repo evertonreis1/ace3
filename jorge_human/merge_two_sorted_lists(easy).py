@@ -1,10 +1,4 @@
-class listNode:
-    def __init__(self, val=0, next=None) -> None:
-        self.val = val
-        self.next = next
-
-class Solution:
-    
+class Solution:    
     def mergeTwoLists(self, list1:listNode, list2:listNode):   
         if not list1:
             return list2
@@ -31,10 +25,3 @@ class Solution:
             current_m.next = query
 
         return merged
-
-    def listNodeAppend(self, list:listNode, value):
-        current = list
-        while current.next != None:
-            current = current.next
-
-        current.next = listNode(value)

@@ -1,11 +1,4 @@
-class listNode:
-
-    def __init__(self, val=0, next=None) -> None:
-        self.val = val
-        self.next = next
-
-class Solution:
-    
+class Solution:    
     def gcd(self, val1, val2):
         gcd = 1
         for n in range(2, min(val1, val2)+1):
@@ -13,13 +6,6 @@ class Solution:
                 gcd = n
         
         return gcd
-    
-    def listNodeAppend(self, list:listNode, value):
-        current = list
-        while current.next != None:
-            current = current.next
-
-        current.next = listNode(value)
     
     def insert_gcd_nodes(self, list:listNode):
         current = list
